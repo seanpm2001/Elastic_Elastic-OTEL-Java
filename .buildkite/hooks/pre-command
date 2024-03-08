@@ -29,6 +29,11 @@ export JAVA_HOME
 PATH="${JAVA_HOME}/bin:$PATH"
 export PATH
 
+echo "$JAVA_HOME"
+ls -l "${HOME}/.java" || true
+ls -l "$JAVA_HOME" || true
+ls -l "${HOME}" || true
+tree "${HOME}/.gradle" || true
 # Fallback to install at runtime
 if [ ! -d "${JAVA_HOME}" ] ; then
   # This should not be the case normally untless the .java-version file has been changed
